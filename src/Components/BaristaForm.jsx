@@ -2,6 +2,7 @@ import React from "react";
 import { Component, useState } from "react";
 import RecipeChoices from "./RecipeChoices";
 import drinksJson from "../assets/drinks.json"
+import "./BaristaForm.css";
 
 const BaristaForm = () => {
   const [inputs, setInputs] = useState({
@@ -151,20 +152,10 @@ const BaristaForm = () => {
             checked={inputs["blended"]}
           />
         </div>
-
+      </form>
       <button type="submit" onClick={onCheckAnswer} className="button submit">
         Check Answer
       </button>
-
-      <button
-        type="new-drink-button"
-        className="button submit"
-        onClick={onNewDrink}
-      >
-        New Drink
-      </button>
-      </form>
-      
     </div>
   );
 };
